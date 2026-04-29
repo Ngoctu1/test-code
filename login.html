@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#0060a8",
+                        "on-tertiary-container": "#503800",
+                        "on-primary-container": "#003d6f",
+                        "surface-variant": "#e1e3e4",
+                        "outline-variant": "#c1c7d3",
+                        "primary": "#0060a8",
+                        "tertiary": "#7c5800",
+                        "on-secondary-fixed-variant": "#314865",
+                        "secondary-fixed": "#d3e4ff",
+                        "on-tertiary-fixed": "#271900",
+                        "background": "#f8f9fa",
+                        "on-primary-fixed-variant": "#004881",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeeef",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed": "#ffdea7",
+                        "primary-fixed": "#d3e4ff",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#d69d1c",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001c38",
+                        "primary-container": "#67aaf9",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#b1c8eb",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface": "#191c1d",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed-variant": "#5e4200",
+                        "secondary": "#49607e",
+                        "on-surface-variant": "#414751",
+                        "on-secondary-fixed": "#011c37",
+                        "on-background": "#191c1d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#fabc3d",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-container": "#4a607f",
+                        "outline": "#717782",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#c4dcff",
+                        "inverse-primary": "#a2c9ff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container-highest": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(103, 170, 249, 0.4), rgba(0, 96, 168, 0.7));
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #0060a8, #67aaf9);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background font-body text-on-background min-h-screen flex flex-col md:flex-row overflow-x-hidden">
+    <!-- Top Half (Mobile) / Left Panel (Desktop) -->
+    <section class="relative w-full md:w-1/2 h-[397px] md:h-screen overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
+            data-alt="Stunning aerial view of Ha Long Bay limestone karsts in turquoise water with soft sunset light and warm golden tones"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6ERD0PT0SchU6i_s8JfASYVVDxbR6A7LTLCOi40UeF8AWJYM7mcpiI17X6mRiVkgdQD5PP1vV5KD45GSSQisWZ5OCZZ9TbfWVHnUSAFv2WgSTlUr_dXidpjL0TajdV1H-9G9-FqHWleIrzVULuJ0J-RQ_NT6xoQU3Xj5PUwBepAVyaNdBayWZjyLwspmc-VpNuslsZFK7DytDsaxqUvqJ8u9VVKCGXFRPxxpGJYrs75Abml4yZtNurO4kq5Jf8AC1QE17s8v3TQ');">
+        </div>
+        <!-- Branding Overlay -->
+        <div class="absolute inset-0 hero-gradient flex flex-col items-center justify-center text-center p-8">
+            <div class="glass-panel p-6 rounded-3xl mb-6">
+                <div class="flex items-center gap-3">
+                    <a href="index.html">
+                        <span class="material-symbols-outlined text-white text-5xl"
+                            style="font-variation-settings: 'FILL' 1;">travel_explore</span>
+                        <h1 class="font-display font-extrabold text-white text-5xl tracking-tighter">Vivu</h1>
+                    </a>
+                </div>
+            </div>
+            <p class="font-display font-semibold text-white text-xl md:text-2xl tracking-tight max-w-xs md:max-w-md">
+                Khám phá thế giới cùng Vivu
+            </p>
+        </div>
+    </section>
+    <!-- Bottom Half (Mobile) / Right Panel (Desktop) -->
+    <main
+        class="w-full md:w-1/2 min-h-[486px] md:h-screen bg-surface-container-lowest flex items-start md:items-start justify-center relative -mt-8 md:mt-0 rounded-t-[32px] md:rounded-none z-10 shadow-2xl md:shadow-none px-6 py-10 md:px-12 lg:px-24">
+        <div class="w-full max-w-md">
+            <!-- Auth Toggle Tabs -->
+            <div class="flex p-1 bg-surface-container rounded-full mb-10 w-fit mx-auto md:mx-0">
+                <button id="login-tab"
+                    class="px-8 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 bg-surface-container-lowest text-primary shadow-sm">
+                    Đăng nhập
+                </button>
+                <button id="register-tab"
+                    class="px-8 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-on-surface-variant hover:text-on-surface">
+                    Đăng ký
+                </button>
+            </div>
+
+            <!-- Login Form Container -->
+            <div id="login-form-container">
+                <div class="mb-8">
+                    <h2 class="font-display font-bold text-3xl text-on-surface mb-2">Chào mừng trở lại</h2>
+                    <p class="text-on-surface-variant">Vui lòng nhập thông tin để tiếp tục hành trình của bạn.</p>
+                </div>
+                <!-- Login Form -->
+                <form class="space-y-5" onsubmit="return false;">
+                    <div class="space-y-1">
+                        <label
+                            class="block text-xs font-bold text-on-surface-variant tracking-wider uppercase ml-1">Email</label>
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+                                style="font-size: 20px;">mail</span>
+                            <input
+                                class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-2xl focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all placeholder:text-outline"
+                                placeholder="example@gmail.com" type="email" />
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-on-surface-variant tracking-wider uppercase ml-1">Mật
+                            khẩu</label>
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+                                style="font-size: 20px;">lock</span>
+                            <input
+                                class="w-full pl-12 pr-12 py-4 bg-surface-container-highest border-none rounded-2xl focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all placeholder:text-outline"
+                                placeholder="••••••••" type="password" />
+                            <button
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface transition-colors"
+                                type="button">
+                                <span class="material-symbols-outlined" style="font-size: 20px;">visibility</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <a class="text-sm font-semibold text-primary hover:underline underline-offset-4" href="#">Quên
+                            mật
+                            khẩu?</a>
+                    </div>
+                    <button
+                        class="w-full py-4 btn-gradient text-white font-bold rounded-2xl shadow-lg shadow-primary-container/20 hover:scale-[1.02] active:scale-95 transition-all text-lg">
+                        Đăng nhập
+                    </button>
+                </form>
+            </div>
+
+            <!-- Register Form Container (Hidden by default) -->
+            <div id="register-form-container" class="hidden">
+                <div class="mb-8">
+                    <h2 class="font-display font-bold text-3xl text-on-surface mb-2">Tạo tài khoản mới</h2>
+                    <p class="text-on-surface-variant">Tham gia cùng Vivu để nhận nhiều ưu đãi hấp dẫn.</p>
+                </div>
+                <!-- Register Form -->
+                <form class="space-y-5" onsubmit="return false;">
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-on-surface-variant tracking-wider uppercase ml-1">Họ
+                            và tên</label>
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+                                style="font-size: 20px;">person</span>
+                            <input
+                                class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-2xl focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all placeholder:text-outline"
+                                placeholder="Nguyễn Văn A" type="text" />
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label
+                            class="block text-xs font-bold text-on-surface-variant tracking-wider uppercase ml-1">Email</label>
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+                                style="font-size: 20px;">mail</span>
+                            <input
+                                class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-2xl focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all placeholder:text-outline"
+                                placeholder="example@gmail.com" type="email" />
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-on-surface-variant tracking-wider uppercase ml-1">Mật
+                            khẩu</label>
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+                                style="font-size: 20px;">lock</span>
+                            <input
+                                class="w-full pl-12 pr-12 py-4 bg-surface-container-highest border-none rounded-2xl focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all placeholder:text-outline"
+                                placeholder="••••••••" type="password" />
+                        </div>
+                    </div>
+                    <button
+                        class="w-full py-4 btn-gradient text-white font-bold rounded-2xl shadow-lg shadow-primary-container/20 hover:scale-[1.02] active:scale-95 transition-all text-lg">
+                        Đăng ký ngay
+                    </button>
+                </form>
+            </div>
+
+            <!-- Social Login Divider -->
+
+            <!-- Bottom Text -->
+
+        </div>
+    </main>
+    <!-- Floating Help Button (Contextual) -->
+    <button
+        class="fixed bottom-6 right-6 w-14 h-14 bg-surface-container-lowest text-primary rounded-full shadow-2xl flex items-center justify-center hover:bg-primary-container hover:text-white transition-all transform hover:rotate-12 group md:hidden">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">help_center</span>
+    </button>
+
+    <script>
+        const loginTab = document.getElementById('login-tab');
+        const registerTab = document.getElementById('register-tab');
+        const loginForm = document.getElementById('login-form-container');
+        const registerForm = document.getElementById('register-form-container');
+
+        const activeClass = ['bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold'];
+        const inactiveClass = ['text-on-surface-variant', 'hover:text-on-surface', 'font-medium'];
+
+        function showLogin() {
+            // Update tabs
+            loginTab.classList.add(...activeClass);
+            loginTab.classList.remove(...inactiveClass);
+            registerTab.classList.add(...inactiveClass);
+            registerTab.classList.remove(...activeClass);
+
+            // Show/Hide forms
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        }
+
+        function showRegister() {
+            // Update tabs
+            registerTab.classList.add(...activeClass);
+            registerTab.classList.remove(...inactiveClass);
+            loginTab.classList.add(...inactiveClass);
+            loginTab.classList.remove(...activeClass);
+
+            // Show/Hide forms
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        }
+
+        loginTab.addEventListener('click', showLogin);
+        registerTab.addEventListener('click', showRegister);
+    </script>
+</body>
+
+</html>
