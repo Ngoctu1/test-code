@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Ethereal Horizon | Vivu Travel</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "var(--primary)",
+                        "on-primary": "var(--on-primary)",
+                        "primary-container": "var(--primary-container)",
+                        "on-primary-container": "var(--on-primary-container)",
+                        secondary: "var(--secondary)",
+                        "on-secondary": "var(--on-secondary)",
+                        "secondary-container": "var(--secondary-container)",
+                        "on-secondary-container": "var(--on-secondary-container)",
+                        tertiary: "var(--tertiary)",
+                        "on-tertiary": "var(--on-tertiary)",
+                        "tertiary-container": "var(--tertiary-container)",
+                        "on-tertiary-container": "var(--on-tertiary-container)",
+                        error: "var(--error)",
+                        "on-error": "var(--on-error)",
+                        "error-container": "var(--error-container)",
+                        "on-error-container": "var(--on-error-container)",
+                        background: "var(--background)",
+                        "on-background": "var(--on-background)",
+                        surface: "var(--surface)",
+                        "on-surface": "var(--on-surface)",
+                        "surface-variant": "var(--surface-variant)",
+                        "on-surface-variant": "var(--on-surface-variant)",
+                        outline: "var(--outline)",
+                        "outline-variant": "var(--outline-variant)",
+                        "primary-fixed": "var(--primary-fixed)",
+                        "primary-fixed-dim": "var(--primary-fixed-dim)",
+                        "tertiary-fixed": "var(--tertiary-fixed)",
+                        "surface-container-low": "var(--surface-container-low)",
+                        "surface-container-lowest": "var(--surface-container-lowest)",
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        display: ["Plus Jakarta Sans"],
+                        body: ["Inter"],
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/searchbar.js"></script>
+</head>
+
+<body class="bg-background text-on-surface">
+    <!-- TopAppBar -->
+    <div id="header-component"></div>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative h-[870px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Hero" class="w-full h-full object-cover"
+                    data-alt="Cinematic wide shot of a pristine tropical beach at sunrise with turquoise water and soft orange sky light"
+                    src="https://vietravelasia.com/media/images/2022/12/shutterstock_1727736718-0cf15e89f75dc98079c434fb4115adab.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/90"></div>
+            </div>
+            <div class="relative z-10 w-full max-w-7xl px-8 text-center" style="top:-10%">
+                <h1 class="text-6xl md:text-8xl font-extrabold text-on-surface tracking-tighter mb-8 leading-[1.1]"
+                    style="font-size: 60px;text-align: left;padding-left: 100px;">
+                    Trải nghiệm kỳ nghỉ <span class="text-primary italic"> tuyệt vời</span>.
+                </h1>
+                <!-- Booking Search Bar (Glassmorphism) -->
+
+                <div
+                    class="glass-effect p-4 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.05)] max-w-6xl mx-auto flex flex-col md:flex-col items-start gap-2 ">
+                    <div class="bordersearch" style="width: 100%;"><!-- div moi -->
+                        <div class=" flex items-center gap-4 px-6 py-3 text-left">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <div class="flex flex-col" style="width: 100%;">
+                                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Địa
+                                    điểm</span>
+                                <input
+                                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline"
+                                    placeholder="Nơi muốn đén?" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; border: none; border-top: 2px solid #aad4ea; margin: 0;">
+                    <div class="flex flex-row md:flex-row">
+
+                        <div class="flex-1 flex items-center gap-4 px-6 py-3 text-left bordersearch">
+                            <span class="material-symbols-outlined text-primary">calendar_month</span>
+
+                            <div class="flex items-center gap-4">
+                                <div>
+                                    <span
+                                        class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Nhận
+                                        phòng</span>
+                                    <input id="check-in"
+                                        class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline block"
+                                        placeholder="Chọn ngày đến" type="text" readonly />
+                                </div>
+
+                                <span class="material-symbols-outlined text-primary">calendar_month</span>
+
+                                <div>
+                                    <span
+                                        class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Trả
+                                        phòng</span>
+                                    <input id="check-out"
+                                        class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline block"
+                                        placeholder="Chọn ngày đi" type="text" readonly />
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="hidden md:block w-[1px] h-10 bg-outline-variant opacity-20"></div>
+                        <!-- <div class="flex-1 flex items-center gap-4 px-6 py-3 text-left bordersearch">
+                            <span class="material-symbols-outlined text-primary">group</span>
+                            <div class="flex flex-col">
+                                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Mọi
+                                    người</span>
+                                <input
+                                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline"
+                                    placeholder="Chọn số người" type="text" />
+                            </div>
+                        </div> -->
+                        <div class="relative flex-1" id="booking-guest-container">
+
+                            <div id="booking-guest-trigger"
+                                class="flex items-center gap-4 px-6 py-3 text-left bordersearch cursor-pointer hover:bg-gray-50 rounded-lg transition">
+                                <span class="material-symbols-outlined text-primary text-gray-500">group</span>
+                                <div class="flex flex-col pointer-events-none">
+                                    <span
+                                        class="text-sm tracking-widest text-on-surface-variant font-bold text-gray-500"
+                                        id="text-room-count">
+                                        1 Phòng
+                                    </span>
+                                    <span
+                                        class="bg-transparent border-none p-0 text-on-surface font-semibold text-gray-900"
+                                        id="text-guest-count">
+                                        1 người lớn, 0 trẻ em
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div id="booking-guest-popup"
+                                class="hidden absolute top-full left-0 mt-3 w-80 bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-200 z-50">
+
+                                <div
+                                    class="absolute -top-2 left-10 w-4 h-4 bg-white border-t border-l border-gray-200 transform rotate-45">
+                                </div>
+
+                                <div class="relative bg-white rounded-xl p-2 z-10">
+                                    <div class="flex justify-between items-center p-3 border-b border-gray-100">
+                                        <span class="text-gray-800 font-medium">Phòng</span>
+                                        <div class="flex items-center gap-4">
+                                            <button type="button"
+                                                class="btn-decrease w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                                data-target="room">-</button>
+                                            <span class="w-4 text-center font-semibold" id="val-room">1</span>
+                                            <button type="button"
+                                                class="btn-increase w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                                data-target="room">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center p-3 border-b border-gray-100">
+                                        <div class="flex flex-col">
+                                            <span class="text-gray-800 font-medium">Người Lớn</span>
+                                            <span class="text-sm text-gray-500">Từ 17 tuổi</span>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <button type="button"
+                                                class="btn-decrease w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                                data-target="adult">-</button>
+                                            <span class="w-4 text-center font-semibold" id="val-adult">1</span>
+                                            <button type="button"
+                                                class="btn-increase w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                                data-target="adult">+</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex justify-between items-center p-3">
+                                        <div class="flex flex-col">
+                                            <span class="text-gray-800 font-medium">Trẻ em</span>
+                                            <span class="text-sm text-gray-500">Từ 0 - 16 tuổi</span>
+                                        </div>
+                                        <div class="flex items-center gap-4">
+                                            <button type="button"
+                                                class="btn-decrease w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                                data-target="child">-</button>
+                                            <span class="w-4 text-center font-semibold" id="val-child">0</span>
+                                            <button type="button"
+                                                class="btn-increase w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                                data-target="child">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full md:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold tracking-tight hover:shadow-lg transition-all"
+                            style="text-wrap-mode: nowrap;">
+                            Tìm kiếm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Deals (Bento Grid) -->
+        <section class="max-w-7xl mx-auto px-8 py-24">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-extrabold tracking-tight">Điểm đến yêu thích trong nước</h2>
+                    <p class="text-on-surface-variant mt-2 text-lg">Lên rừng xuống biển. Trọn vẹn Việt Nam</p>
+                </div>
+                <a class="text-primary font-bold hover:underline underline-offset-8" href="#">View all deals</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px]">
+                <div
+                    class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Luxury overwater bungalow resort in the Maldives with infinity pool and sunset view"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLJ_iu3QaT14r4c3YgT70LeyXJDzZHFzkBrtLSRNX9vpWhz6LOpU4DOlRPaX4VR3M_SYMEkLufLU2ZksUQmF7j8gzyTHdXxklFXiRrCAf7ykvrN3ZJaQ0PWTof6ESW4KMkY-4XfRzkJcuMCVrkNXpZ9Dw2HaFxGXaHKPegMQu2skNw6KtKyatUCohB2tgBZ00HgQRSOr6ntSikd4arMYhj3vnU31Gyg42rm0d5yPi--8gLCF8qfZDa5qY9u6COpa1U3JfvbDjqhw" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <!-- <span
+                            class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Flash
+                            Sale</span> -->
+                        <h3 class="text-3xl font-bold text-white">Đà Nẵng</h3>
+                        <p class="text-white/80">Save 40% on 7-night luxury stays</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Historic boutique hotel facade in Paris with flower boxes and cobblestone street"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOBcg5wt7UaiWqReQiTEna-qh6tmXC0_C4pI42HS5UwP55Nl1_KIlQFys3bCMe-MfJnFz3vBDG2bylJ22x_x_JIkQeDVeBxY56fv-tHSx_gDNmFL7_KquuxA3plMn1EJEsaotRpM4jmzNvwigqajGOXOQbXoNZPSWTLHyp3XXHkWvJEDYIkFGi_aShUkYuSkHzaBpnBlyWBp0NvOSRAtTOrcJA8TSSt05v1fJyxrFVD2ZslPxkE8k9RAR9Sc5Ry4mwYINKB8SRgg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white">Nha Trang</h3>
+                        <p class="text-white/80">Complimentary wine tour included</p>
+                    </div>
+                </div>
+                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Traditional wooden boat on the coast of Bali with golden sunlight"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS5K3zG9dXTaJc4_5Plu3iAzXXLuSUxnDpl8_pyNjDYGrx5IPWo9e3nexz_lqZOdHu5UnE-E_iK5_wuNX1hxYxVTSsIwBM_iEenAm57YbHfZFRiiTQFvDUYAfBhIiz_4RlrW4u_E7MILV1cKF8RA572VeSr1pnaUhx8hccC5DW6veKfhdYH5yJg67l5EbUrFnmZMBJWitHqPnoQzrA71xN660OqPZ3ymYKWQDvSuCFIIb0UXUT5EDmmFMCbjV5D_-UJ_UpmXguOw" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-lg font-bold text-white">Cát Bà</h3>
+                        <p class="text-white/80 text-sm">$899 Package</p>
+                    </div>
+                </div>
+                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Snow capped Swiss Alps with luxury wooden chalet and misty morning air"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4amP6fcYQobcATPAVUSmHe3fkkxVRknn_2kgenSIXL3H6HJqOO50SHKG1IO8XdzQIycHnQ7ymR50M6VwoK6HuHYbZlp_P_uAWXt91AhgP7HmpXJFfGy_WQJk7bgWccZTk8iwgMDv3zqLqZhQ1xWgO8V86RsBcbsIWX6XJfmB2eNcfLze6MvTLEcbZMMmozxzFimXnXvPieYJZjEg29obCzY7DtZO6I1DUfQ3wW_1ynn4oyJzjCM2z8SdUNEbEG1wEkFOYasNHqQ" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-lg font-bold text-white">Hạ Long</h3>
+                        <p class="text-white/80 text-sm">Last-minute Skiing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Địa điểm yêu thích nước ngoài -->
+        <section class="max-w-7xl mx-auto px-8 py-24">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-extrabold tracking-tight">Điểm đến yêu thích nước ngoài</h2>
+                    <p class="text-on-surface-variant mt-2 text-lg">Bao la thế giới. Bốn bể là nhà</p>
+                </div>
+                <a class="text-primary font-bold hover:underline underline-offset-8" href="#">Xem chi tiết</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px]">
+                <div
+                    class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Luxury overwater bungalow resort in the Maldives with infinity pool and sunset view"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLJ_iu3QaT14r4c3YgT70LeyXJDzZHFzkBrtLSRNX9vpWhz6LOpU4DOlRPaX4VR3M_SYMEkLufLU2ZksUQmF7j8gzyTHdXxklFXiRrCAf7ykvrN3ZJaQ0PWTof6ESW4KMkY-4XfRzkJcuMCVrkNXpZ9Dw2HaFxGXaHKPegMQu2skNw6KtKyatUCohB2tgBZ00HgQRSOr6ntSikd4arMYhj3vnU31Gyg42rm0d5yPi--8gLCF8qfZDa5qY9u6COpa1U3JfvbDjqhw" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <!-- <span
+                            class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Flash
+                            Sale</span> -->
+                        <h3 class="text-3xl font-bold text-white">Singapore</h3>
+                        <p class="text-white/80">Save 40% on 7-night luxury stays</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Historic boutique hotel facade in Paris with flower boxes and cobblestone street"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOBcg5wt7UaiWqReQiTEna-qh6tmXC0_C4pI42HS5UwP55Nl1_KIlQFys3bCMe-MfJnFz3vBDG2bylJ22x_x_JIkQeDVeBxY56fv-tHSx_gDNmFL7_KquuxA3plMn1EJEsaotRpM4jmzNvwigqajGOXOQbXoNZPSWTLHyp3XXHkWvJEDYIkFGi_aShUkYuSkHzaBpnBlyWBp0NvOSRAtTOrcJA8TSSt05v1fJyxrFVD2ZslPxkE8k9RAR9Sc5Ry4mwYINKB8SRgg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="text-xl font-bold text-white">Paris</h3>
+                        <p class="text-white/80">Complimentary wine tour included</p>
+                    </div>
+                </div>
+                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Traditional wooden boat on the coast of Bali with golden sunlight"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS5K3zG9dXTaJc4_5Plu3iAzXXLuSUxnDpl8_pyNjDYGrx5IPWo9e3nexz_lqZOdHu5UnE-E_iK5_wuNX1hxYxVTSsIwBM_iEenAm57YbHfZFRiiTQFvDUYAfBhIiz_4RlrW4u_E7MILV1cKF8RA572VeSr1pnaUhx8hccC5DW6veKfhdYH5yJg67l5EbUrFnmZMBJWitHqPnoQzrA71xN660OqPZ3ymYKWQDvSuCFIIb0UXUT5EDmmFMCbjV5D_-UJ_UpmXguOw" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-lg font-bold text-white">Bangkok</h3>
+                        <p class="text-white/80 text-sm">$899 Package</p>
+                    </div>
+                </div>
+                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Snow capped Swiss Alps with luxury wooden chalet and misty morning air"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4amP6fcYQobcATPAVUSmHe3fkkxVRknn_2kgenSIXL3H6HJqOO50SHKG1IO8XdzQIycHnQ7ymR50M6VwoK6HuHYbZlp_P_uAWXt91AhgP7HmpXJFfGy_WQJk7bgWccZTk8iwgMDv3zqLqZhQ1xWgO8V86RsBcbsIWX6XJfmB2eNcfLze6MvTLEcbZMMmozxzFimXnXvPieYJZjEg29obCzY7DtZO6I1DUfQ3wW_1ynn4oyJzjCM2z8SdUNEbEG1wEkFOYasNHqQ" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-lg font-bold text-white">Thượng Hải</h3>
+                        <p class="text-white/80 text-sm">Last-minute Skiing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Vivu (Features) -->
+        <section class="bg-surface-container-low py-24">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="flex flex-col items-start gap-6">
+                        <div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-size: 32px;">verified_user</span>
+                        </div>
+                        <h3 class="text-2xl font-bold tracking-tight">Tin cậy & An toàn</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Mọi điểm đến và chỗ ở đều được các chuyên gia
+                            du lịch của chúng tôi kiểm tra kỹ lưỡng để đảm bảo tiêu chuẩn an toàn cao nhất.</p>
+                    </div>
+                    <div class="flex flex-col items-start gap-6">
+                        <div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary" style="font-size: 32px;">diamond</span>
+                        </div>
+                        <h3 class="text-2xl font-bold tracking-tight">Ưu đãi độc quyền</h3>
+                        <h3 class="hidden">Hidden</h3> <!-- To prevent breaking layout if titles change -->
+                        <p class="text-on-surface-variant leading-relaxed">Các thành viên Vivu sẽ nhận được quyền lợi
+                            độc quyền như nâng cấp phòng, dịch vụ đưa đón riêng tư tại sân bay và nhiều ưu đãi khác.</p>
+                    </div>
+                    <div class="flex flex-col items-start gap-6">
+                        <div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary"
+                                style="font-size: 32px;">support_agent</span>
+                        </div>
+                        <h3 class="text-2xl font-bold tracking-tight">Hỗ trợ 24/7</h3>
+                        <p class="text-on-surface-variant leading-relaxed">Đội ngũ hỗ trợ chuyên nghiệp của chúng tôi
+                            luôn sẵn sàng phục vụ bạn mọi lúc, mọi nơi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Latest News (Editorial Grid) -->
+        <section class="max-w-7xl mx-auto px-8 py-24 border-t border-outline-variant/10">
+            <h2 class="text-4xl font-extrabold tracking-tight mb-12">Cẩm Nang Du lịch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="group cursor-pointer"
+                    onclick="window.location.href='https://vivu72.wordpress.com/2026/04/29/top-4-trai-nghiem-moi-tai-sun-world-ba-na-hills-dip-le-30-4/'">
+                    <div class="overflow-hidden rounded-xl mb-6 aspect-video">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Cinematic shot of misty mountains in Northern Vietnam with rice terraces at dusk"
+                            src="https://vivu72.wordpress.com/wp-content/uploads/2026/04/sun-world-ba-na-hills-ivivu-1.jpg?w=1440&allow_lossy=1" />
+                    </div>
+                    <span
+                        class="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-3 block">Sustainability</span>
+                    <h3 class="text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
+                        Top 4 trải nghiệm mới tại Sun World Bà Nà Hills dịp lễ 30/4</h3>
+                    <p class="text-on-surface-variant line-clamp-2">Sun World Bà Nà Hills dịp 30/4 có gì “hot”? Trải
+                        nghiệm ánh sáng “Nguồn Cội”, lễ hội Mặt Trời, ẩm thực đa dạng và loạt trò chơi đỉnh cao.</p>
+                </div>
+                <div class="group cursor-pointer"
+                    onclick="window.location.href='https://vivu72.wordpress.com/2026/04/29/du-lich-dao-ly-son-choi-gi-7-trai-nghiem-kham-pha-kho-bo-lo/'">
+                    <div class="overflow-hidden rounded-xl mb-6 aspect-video">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Interior of a modern high-end cocktail bar in Tokyo with neon accents and sleek design"
+                            src="https://vivu72.wordpress.com/wp-content/uploads/2026/04/du-lich-dao-ly-son-ivivu-4-370x215-1.jpg?allow_lossy=1" />
+                    </div>
+                    <span class="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-3 block">Culture</span>
+                    <h3 class="text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">The
+                        Du lịch đảo Lý Sơn chơi gì? 7 trải nghiệm khám phá khó bỏ lỡ</h3>
+                    <p class="text-on-surface-variant line-clamp-2">
+                        Du lịch đảo Lý Sơn chơi gì? Gợi ý 7 hoạt động thú vị và những lưu ý quan trọng giúp bạn khám phá
+                        trọn vẹn hòn đảo xinh đẹp này.
+
+                        .</p>
+                </div>
+                <div class="group cursor-pointer"
+                    onclick="window.location.href='https://vivu72.wordpress.com/2026/04/29/kinh-nghiem-du-lich-dao-phu-quy-he-2026/'">
+                    <div class="overflow-hidden rounded-xl mb-6 aspect-video">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Wide shot of African savannah at sunset with acacia trees in silhouette"
+                            src="https://vivu72.wordpress.com/wp-content/uploads/2026/04/du-lich-dao-phu-quy-ivivu-10-1536x1008-1.jpg?w=1440&allow_lossy=1" />
+                    </div>
+                    <span class="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-3 block">Luxury</span>
+                    <h3 class="text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">Wild
+                        Kinh nghiệm du lịch đảo Phú Quý hè 2026</h3>
+                    <p class="text-on-surface-variant line-clamp-2">Nếu bạn đang tìm điểm đến biển đảo vừa đẹp, lại chưa
+                        quá đông đúc, thì một chuyến du lịch đảo Phú Quý là lựa chọn lý tưởng cho mùa hè 2026..</p>
+                </div>
+            </div>
+        </section>
+        <!-- App Download (Asymmetric) -->
+        <!-- <section class="max-w-7xl mx-auto px-8 py-24 flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1 order-2 md:order-1">
+                <h2 class="text-5xl font-extrabold tracking-tighter mb-6">The World in Your <span
+                        class="text-primary">Pocket</span>.</h2>
+                <p class="text-lg text-on-surface-variant mb-10 leading-relaxed max-w-lg">Plan, book, and manage your
+                    trips on the go. Get real-time updates and exclusive mobile-only offers with the Vivu mobile app.
+                </p>
+                <div class="flex gap-4">
+                    <button
+                        class="bg-on-surface text-surface py-3 px-8 rounded-full flex items-center gap-3 hover:opacity-90 transition-opacity">
+                        <span class="material-symbols-outlined">ios</span>
+                        <span class="font-bold">App Store</span>
+                    </button>
+                    <button
+                        class="border border-outline py-3 px-8 rounded-full flex items-center gap-3 hover:bg-surface-container-high transition-colors">
+                        <span class="material-symbols-outlined">play_arrow</span>
+                        <span class="font-bold">Play Store</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex-1 order-1 md:order-2 relative h-[500px] w-full">
+                <div class="absolute right-0 top-0 w-3/4 h-[400px] bg-primary-container rounded-3xl opacity-20"></div>
+                <img class="absolute top-12 left-12 w-3/4 h-[450px] object-cover rounded-3xl shadow-2xl"
+                    data-alt="Person holding a modern smartphone showing a clean travel booking application UI against a soft blur background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWDhcGNTw6Kz24cNqHgmzkemkBl42KgPWTzkjomK8pWchUIcmx13Ckpwrnp_zD6CjJNAwPz2equ86Fywrs5Noy17uVMw-1O275IW5LCBD2OZMVxzrbAw8IgFrnRoj1YUyv6ocOiDOcQuSloY4HyWJpWeqFdqcfJP1JFHVGb9IX2kSLa7Vv8kFG6f_M0d_MfBVs3iOrhRyhG55gdLxfhYpoZ4BTXNqNs8MVOGo4sVspo5gBc7ZzUvi9ezsb3d0zXAo5YFjLv5_11A" />
+            </div>
+        </section> -->
+    </main>
+    <!-- Footer -->
+    <div id="footer-component"></div>
+</body>
+
+</html>
+<script>
+
+</script>
