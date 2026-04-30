@@ -38,4 +38,32 @@ function loadComponent(id, filePath) {
 loadComponent("header-component", "components/header.html");
 loadComponent("footer-component", "components/footer.html");
 
-// Số người trong form đặt phòng
+// Hỗ trợ nhiều slider độc lập trên trang
+function setupSlider(sliderId, leftBtnId, rightBtnId) {
+  const slider = document.getElementById(sliderId);
+  const btnLeft = document.getElementById(leftBtnId);
+  const btnRight = document.getElementById(rightBtnId);
+  if (slider && btnLeft && btnRight) {
+    btnLeft.addEventListener("click", () => {
+      slider.scrollBy({ left: -slider.offsetWidth, behavior: "smooth" });
+    });
+    btnRight.addEventListener("click", () => {
+      slider.scrollBy({ left: slider.offsetWidth, behavior: "smooth" });
+    });
+    function updateButtons() {
+      btnLeft.style.display = slider.scrollLeft > 10 ? "flex" : "none";
+      btnRight.style.display =
+        slider.scrollLeft + slider.offsetWidth < slider.scrollWidth - 10
+          ? "flex"
+          : "none";
+    }
+    slider.addEventListener("scroll", updateButtons);
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupSlider("accommodation-slider", "slide-left", "slide-right");
+  setupSlider("accommodation-slider-2", "slide2-left", "slide2-right");
+});

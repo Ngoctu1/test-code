@@ -66,6 +66,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
     <script src="js/searchbar.js"></script>
+    <link rel="icon" type="image/png" href="icon/vivu(1).png">
 </head>
 
 <body class="bg-background text-on-surface">
@@ -73,7 +74,7 @@
     <div id="header-component"></div>
 
     <main class="pt-20">
-        <!-- Hero Section -->
+        <!-- banner tìm kiếm Section -->
         <section class="relative h-[870px] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
                 <img alt="Hero" class="w-full h-full object-cover"
@@ -134,16 +135,7 @@
 
                         </div>
                         <div class="hidden md:block w-[1px] h-10 bg-outline-variant opacity-20"></div>
-                        <!-- <div class="flex-1 flex items-center gap-4 px-6 py-3 text-left bordersearch">
-                            <span class="material-symbols-outlined text-primary">group</span>
-                            <div class="flex flex-col">
-                                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Mọi
-                                    người</span>
-                                <input
-                                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline"
-                                    placeholder="Chọn số người" type="text" />
-                            </div>
-                        </div> -->
+
                         <div class="relative flex-1" id="booking-guest-container">
 
                             <div id="booking-guest-trigger"
@@ -228,17 +220,18 @@
                 </div>
             </div>
         </section>
-        <!-- Featured Deals (Bento Grid) -->
+
+        <!-- Địa điểm yêu thích trong nước -->
         <section class="max-w-7xl mx-auto px-8 py-24">
             <div class="flex justify-between items-end mb-12">
                 <div>
                     <h2 class="text-4xl font-extrabold tracking-tight">Điểm đến yêu thích trong nước</h2>
                     <p class="text-on-surface-variant mt-2 text-lg">Lên rừng xuống biển. Trọn vẹn Việt Nam</p>
                 </div>
-                <a class="text-primary font-bold hover:underline underline-offset-8" href="#">View all deals</a>
+                <a class="text-primary font-bold hover:underline underline-offset-8" href="#">Xem chi tiết</a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px]">
-                <div
+                <a href="#"
                     class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Luxury overwater bungalow resort in the Maldives with infinity pool and sunset view"
@@ -246,14 +239,11 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
                     </div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <!-- <span
-                            class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Flash
-                            Sale</span> -->
                         <h3 class="text-3xl font-bold text-white">Đà Nẵng</h3>
-                        <p class="text-white/80">Save 40% on 7-night luxury stays</p>
+
                     </div>
-                </div>
-                <div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                </a>
+                <a href="#" class="md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Historic boutique hotel facade in Paris with flower boxes and cobblestone street"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOBcg5wt7UaiWqReQiTEna-qh6tmXC0_C4pI42HS5UwP55Nl1_KIlQFys3bCMe-MfJnFz3vBDG2bylJ22x_x_JIkQeDVeBxY56fv-tHSx_gDNmFL7_KquuxA3plMn1EJEsaotRpM4jmzNvwigqajGOXOQbXoNZPSWTLHyp3XXHkWvJEDYIkFGi_aShUkYuSkHzaBpnBlyWBp0NvOSRAtTOrcJA8TSSt05v1fJyxrFVD2ZslPxkE8k9RAR9Sc5Ry4mwYINKB8SRgg" />
@@ -261,10 +251,10 @@
                     </div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-xl font-bold text-white">Nha Trang</h3>
-                        <p class="text-white/80">Complimentary wine tour included</p>
+
                     </div>
-                </div>
-                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                </a>
+                <a href="#" class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Traditional wooden boat on the coast of Bali with golden sunlight"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS5K3zG9dXTaJc4_5Plu3iAzXXLuSUxnDpl8_pyNjDYGrx5IPWo9e3nexz_lqZOdHu5UnE-E_iK5_wuNX1hxYxVTSsIwBM_iEenAm57YbHfZFRiiTQFvDUYAfBhIiz_4RlrW4u_E7MILV1cKF8RA572VeSr1pnaUhx8hccC5DW6veKfhdYH5yJg67l5EbUrFnmZMBJWitHqPnoQzrA71xN660OqPZ3ymYKWQDvSuCFIIb0UXUT5EDmmFMCbjV5D_-UJ_UpmXguOw" />
@@ -272,10 +262,10 @@
                     </div>
                     <div class="absolute bottom-0 left-0 p-4">
                         <h3 class="text-lg font-bold text-white">Cát Bà</h3>
-                        <p class="text-white/80 text-sm">$899 Package</p>
+
                     </div>
-                </div>
-                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                </a>
+                <a href="#" class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Snow capped Swiss Alps with luxury wooden chalet and misty morning air"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4amP6fcYQobcATPAVUSmHe3fkkxVRknn_2kgenSIXL3H6HJqOO50SHKG1IO8XdzQIycHnQ7ymR50M6VwoK6HuHYbZlp_P_uAWXt91AhgP7HmpXJFfGy_WQJk7bgWccZTk8iwgMDv3zqLqZhQ1xWgO8V86RsBcbsIWX6XJfmB2eNcfLze6MvTLEcbZMMmozxzFimXnXvPieYJZjEg29obCzY7DtZO6I1DUfQ3wW_1ynn4oyJzjCM2z8SdUNEbEG1wEkFOYasNHqQ" />
@@ -283,12 +273,13 @@
                     </div>
                     <div class="absolute bottom-0 left-0 p-4">
                         <h3 class="text-lg font-bold text-white">Hạ Long</h3>
-                        <p class="text-white/80 text-sm">Last-minute Skiing</p>
+
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         <!-- Địa điểm yêu thích nước ngoài -->
+        <hr class="blue-divider">
         <section class="max-w-7xl mx-auto px-8 py-24">
             <div class="flex justify-between items-end mb-12">
                 <div>
@@ -298,7 +289,7 @@
                 <a class="text-primary font-bold hover:underline underline-offset-8" href="#">Xem chi tiết</a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px]">
-                <div
+                <a href="#"
                     class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Luxury overwater bungalow resort in the Maldives with infinity pool and sunset view"
@@ -306,14 +297,12 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent">
                     </div>
                     <div class="absolute bottom-0 left-0 p-8">
-                        <!-- <span
-                            class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Flash
-                            Sale</span> -->
+
                         <h3 class="text-3xl font-bold text-white">Singapore</h3>
-                        <p class="text-white/80">Save 40% on 7-night luxury stays</p>
+
                     </div>
-                </div>
-                <div class="md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                </a>
+                <a href="#" class="md:col-span-2 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Historic boutique hotel facade in Paris with flower boxes and cobblestone street"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOBcg5wt7UaiWqReQiTEna-qh6tmXC0_C4pI42HS5UwP55Nl1_KIlQFys3bCMe-MfJnFz3vBDG2bylJ22x_x_JIkQeDVeBxY56fv-tHSx_gDNmFL7_KquuxA3plMn1EJEsaotRpM4jmzNvwigqajGOXOQbXoNZPSWTLHyp3XXHkWvJEDYIkFGi_aShUkYuSkHzaBpnBlyWBp0NvOSRAtTOrcJA8TSSt05v1fJyxrFVD2ZslPxkE8k9RAR9Sc5Ry4mwYINKB8SRgg" />
@@ -321,10 +310,10 @@
                     </div>
                     <div class="absolute bottom-0 left-0 p-6">
                         <h3 class="text-xl font-bold text-white">Paris</h3>
-                        <p class="text-white/80">Complimentary wine tour included</p>
+
                     </div>
-                </div>
-                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                </a>
+                <a href="#" class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Traditional wooden boat on the coast of Bali with golden sunlight"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS5K3zG9dXTaJc4_5Plu3iAzXXLuSUxnDpl8_pyNjDYGrx5IPWo9e3nexz_lqZOdHu5UnE-E_iK5_wuNX1hxYxVTSsIwBM_iEenAm57YbHfZFRiiTQFvDUYAfBhIiz_4RlrW4u_E7MILV1cKF8RA572VeSr1pnaUhx8hccC5DW6veKfhdYH5yJg67l5EbUrFnmZMBJWitHqPnoQzrA71xN660OqPZ3ymYKWQDvSuCFIIb0UXUT5EDmmFMCbjV5D_-UJ_UpmXguOw" />
@@ -332,10 +321,10 @@
                     </div>
                     <div class="absolute bottom-0 left-0 p-4">
                         <h3 class="text-lg font-bold text-white">Bangkok</h3>
-                        <p class="text-white/80 text-sm">$899 Package</p>
+
                     </div>
-                </div>
-                <div class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
+                </a>
+                <a href="#" class="md:col-span-1 relative group overflow-hidden rounded-xl bg-surface-container-low">
                     <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         data-alt="Snow capped Swiss Alps with luxury wooden chalet and misty morning air"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4amP6fcYQobcATPAVUSmHe3fkkxVRknn_2kgenSIXL3H6HJqOO50SHKG1IO8XdzQIycHnQ7ymR50M6VwoK6HuHYbZlp_P_uAWXt91AhgP7HmpXJFfGy_WQJk7bgWccZTk8iwgMDv3zqLqZhQ1xWgO8V86RsBcbsIWX6XJfmB2eNcfLze6MvTLEcbZMMmozxzFimXnXvPieYJZjEg29obCzY7DtZO6I1DUfQ3wW_1ynn4oyJzjCM2z8SdUNEbEG1wEkFOYasNHqQ" />
@@ -343,12 +332,218 @@
                     </div>
                     <div class="absolute bottom-0 left-0 p-4">
                         <h3 class="text-lg font-bold text-white">Thượng Hải</h3>
-                        <p class="text-white/80 text-sm">Last-minute Skiing</p>
+
                     </div>
+                </a>
+            </div>
+        </section>
+        <!-- Tìm theo loại chỗ nghỉ -->
+        <hr class="blue-divider">
+        <section class="max-w-7xl mx-auto px-8 py-24">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Tìm theo loại chỗ nghỉ</h2>
+            <div class="relative">
+                <button id="slide-left" style="top: 44%"
+                    class="absolute left-0 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center focus:outline-none hidden md:flex"
+                    aria-label="Trước">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <div id="accommodation-slider" class="flex gap-8 overflow-x-auto scroll-smooth pb-2 hide-scrollbar">
+                    <a href="#" class="flex-shrink-0 w-72">
+                        <img src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/595550862.jpeg?k=3514aa4abb76a6d19df104cb307b78b841ac0676967f24f4b860d289d55d3964&o="
+                            alt="Khách sạn" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <div class="font-bold text-lg text-center">Khách sạn</div>
+                    </a>
+                    <a href="#" class="flex-shrink-0 w-72">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/595548591.jpeg?k=01741bc3aef1a5233dd33794dda397083092c0215b153915f27ea489468e57a2&o="
+                            alt="Căn hộ" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <div class="font-bold text-lg text-center">Căn hộ</div>
+                    </a>
+                    <a href="#" class="flex-shrink-0 w-72">
+                        <img src="https://q-xx.bstatic.com/xdata/images/hotel/263x210/595551044.jpeg?k=262826efe8e21a0868105c01bf7113ed94de28492ee370f4225f00d1de0c6c44&o="
+                            alt="Resort" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <div class="font-bold text-lg text-center">Các resort</div>
+                    </a>
+                    <a href="#" class="flex-shrink-0 w-72">
+                        <img src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/595550377.jpeg?k=ef93cbc1a3af0d6db84e27b6da280a4ef24dbcfeb065fcfeae4fe9c43dddd2da&o="
+                            alt="Biệt thự" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <div class="font-bold text-lg text-center">Homestay</div>
+                    </a>
+                    <a href="#" class="flex-shrink-0 w-72">
+                        <img src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/595550975.jpeg?k=6d2c22368ec017e1f99a4811c8abb1cb2d7fd829c9ddd12a82ff1aa77ab7da19&o="
+                            alt="Biệt thự" class="rounded-xl w-full h-48 object-cover mb-3">
+                        <div class="font-bold text-lg text-center">Các Motel</div>
+                    </a>
                 </div>
+                <button id="slide-right" style="top: 44%"
+                    class="absolute right-0 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center focus:outline-none hidden md:flex"
+                    aria-label="Tiếp">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+
+        </section>
+        <hr class="blue-divider">
+        <!-- Lưu trú tại các chỗ nghỉ độc đáo hàng đầu -->
+
+
+        <!-- Slide show chỗ nghỉ nổi bật -->
+        <section class="max-w-7xl mx-auto px-8 py-24">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-2">Lưu trú tại các chỗ nghỉ độc đáo hàng đầu</h2>
+            <p class="text-on-surface-variant mb-6 text-lg">Từ biệt thự, lâu đài cho đến nhà thuyền, igloo, chúng
+                tôi
+                đều có hết</p>
+            <div class="relative">
+                <button id="slide2-left"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center focus:outline-none hidden md:flex"
+                    aria-label="Trước">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <div id="accommodation-slider-2" class="flex gap-8 overflow-x-auto scroll-smooth pb-2 hide-scrollbar">
+                    <!-- Card 1 -->
+                    <a href="#"
+                        class="flex-shrink-0 w-80 bg-white rounded-xl shadow p-3 border border-gray-100 relative">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/square400/245132252.jpg?k=e897c46d6e556be570d9110e6d72bae6c6eba16d7af96c72529a2dde6d39d0bd&o="
+                            alt="Mekong Lodge Resort" class="rounded-xl w-full h-40 object-cover mb-3">
+
+                        <div class="text-xs text-gray-600 mb-1 flex items-center gap-1">Nhà nghỉ <span
+                                class="text-yellow-500">★★★★★</span> <span
+                                class="bg-blue-100 text-blue-800 px-1 rounded text-[10px] font-bold ml-1">Genius</span>
+                        </div>
+                        <div class="font-bold text-lg mb-1">Mekong Lodge Resort</div>
+                        <div class="text-sm text-gray-500 mb-1">Cái Bè, Việt Nam</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">8,7</span>
+                            <span class="text-xs text-gray-700">Tuyệt vời</span>
+                            <span class="text-xs text-gray-500">1.042 đánh giá</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="text-xs text-gray-500 line-through">VND 3.000.000</span>
+                            <span class="font-bold text-base text-red-600">VND 1.200.000</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1">Bắt đầu từ</div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="#"
+                        class="flex-shrink-0 w-80 bg-white rounded-xl shadow p-3 border border-gray-100 relative">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/square400/245132252.jpg?k=e897c46d6e556be570d9110e6d72bae6c6eba16d7af96c72529a2dde6d39d0bd&o="
+                            alt="Green Bamboo Lodge Resort" class="rounded-xl w-full h-40 object-cover mb-3">
+
+                        <div class="text-xs text-gray-600 mb-1 flex items-center gap-1">Resort <span
+                                class="text-yellow-500">★★★★☆</span> <span
+                                class="bg-blue-100 text-blue-800 px-1 rounded text-[10px] font-bold ml-1">Genius</span>
+                        </div>
+                        <div class="font-bold text-lg mb-1">Green Bamboo Lodge Resort</div>
+                        <div class="text-sm text-gray-500 mb-1">Cát Tiên, Việt Nam</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">8,4</span>
+                            <span class="text-xs text-gray-700">Rất tốt</span>
+                            <span class="text-xs text-gray-500">682 đánh giá</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="font-bold text-base text-red-600">VND 380.000</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1">Bắt đầu từ</div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="#"
+                        class="flex-shrink-0 w-80 bg-white rounded-xl shadow p-3 border border-gray-100 relative">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/square400/245132252.jpg?k=e897c46d6e556be570d9110e6d72bae6c6eba16d7af96c72529a2dde6d39d0bd&o="
+                            alt="Vedana Lagoon Resort & Spa" class="rounded-xl w-full h-40 object-cover mb-3">
+
+                        <div class="text-xs text-gray-600 mb-1 flex items-center gap-1">Resort <span
+                                class="text-yellow-500">★★★★★</span> <span
+                                class="bg-blue-100 text-blue-800 px-1 rounded text-[10px] font-bold ml-1">Genius</span>
+                        </div>
+                        <div class="font-bold text-lg mb-1">Vedana Lagoon Resort & Spa</div>
+                        <div class="text-sm text-gray-500 mb-1">Huế, Việt Nam</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">9,4</span>
+                            <span class="text-xs text-gray-700">Tuyệt hảo</span>
+                            <span class="text-xs text-gray-500">766 đánh giá</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="text-xs text-gray-500 line-through">VND 4.470.365</span>
+                            <span class="font-bold text-base text-red-600">VND 2.811.860</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1">Bắt đầu từ</div>
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="#"
+                        class="flex-shrink-0 w-80 bg-white rounded-xl shadow p-3 border border-gray-100 relative">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/square400/245132252.jpg?k=e897c46d6e556be570d9110e6d72bae6c6eba16d7af96c72529a2dde6d39d0bd&o="
+                            alt="The Cliff Resort & Residences" class="rounded-xl w-full h-40 object-cover mb-3">
+
+                        <div class="text-xs text-gray-600 mb-1 flex items-center gap-1">Resort <span
+                                class="text-yellow-500">★★★★☆</span> <span
+                                class="bg-blue-100 text-blue-800 px-1 rounded text-[10px] font-bold ml-1">Genius</span>
+                        </div>
+                        <div class="font-bold text-lg mb-1">The Cliff Resort & Residences</div>
+                        <div class="text-sm text-gray-500 mb-1">Mũi Né, Việt Nam</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">9,0</span>
+                            <span class="text-xs text-gray-700">Tuyệt hảo</span>
+                            <span class="text-xs text-gray-500">214 đánh giá</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="text-xs text-gray-500 line-through">VND 4.335.000</span>
+                            <span class="font-bold text-base text-red-600">VND 2.340.900</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1">Bắt đầu từ</div>
+                    </a>
+                    <a href="#"
+                        class="flex-shrink-0 w-80 bg-white rounded-xl shadow p-3 border border-gray-100 relative">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/square400/245132252.jpg?k=e897c46d6e556be570d9110e6d72bae6c6eba16d7af96c72529a2dde6d39d0bd&o="
+                            alt="The Cliff Resort & Residences" class="rounded-xl w-full h-40 object-cover mb-3">
+
+                        <div class="text-xs text-gray-600 mb-1 flex items-center gap-1">Resort <span
+                                class="text-yellow-500">★★★★☆</span> <span
+                                class="bg-blue-100 text-blue-800 px-1 rounded text-[10px] font-bold ml-1">Genius</span>
+                        </div>
+                        <div class="font-bold text-lg mb-1">The Cliff Resort & Residences</div>
+                        <div class="text-sm text-gray-500 mb-1">Mũi Né, Việt Nam</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">9,0</span>
+                            <span class="text-xs text-gray-700">Tuyệt hảo</span>
+                            <span class="text-xs text-gray-500">214 đánh giá</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="text-xs text-gray-500 line-through">VND 4.335.000</span>
+                            <span class="font-bold text-base text-red-600">VND 2.340.900</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1">Bắt đầu từ</div>
+                    </a>
+                    <a href="#"
+                        class="flex-shrink-0 w-80 bg-white rounded-xl shadow p-3 border border-gray-100 relative">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/square400/245132252.jpg?k=e897c46d6e556be570d9110e6d72bae6c6eba16d7af96c72529a2dde6d39d0bd&o="
+                            alt="The Cliff Resort & Residences" class="rounded-xl w-full h-40 object-cover mb-3">
+
+                        <div class="text-xs text-gray-600 mb-1 flex items-center gap-1">Resort <span
+                                class="text-yellow-500">★★★★☆</span> <span
+                                class="bg-blue-100 text-blue-800 px-1 rounded text-[10px] font-bold ml-1">Genius</span>
+                        </div>
+                        <div class="font-bold text-lg mb-1">The Cliff Resort & Residences</div>
+                        <div class="text-sm text-gray-500 mb-1">Mũi Né, Việt Nam</div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">9,0</span>
+                            <span class="text-xs text-gray-700">Tuyệt hảo</span>
+                            <span class="text-xs text-gray-500">214 đánh giá</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <span class="text-xs text-gray-500 line-through">VND 4.335.000</span>
+                            <span class="font-bold text-base text-red-600">VND 2.340.900</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mt-1">Bắt đầu từ</div>
+                    </a>
+                </div>
+                <button id="slide2-right"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center focus:outline-none hidden md:flex"
+                    aria-label="Tiếp">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
             </div>
         </section>
         <!-- Why Choose Vivu (Features) -->
+        <hr class="blue-divider">
         <section class="bg-surface-container-low py-24">
             <div class="max-w-7xl mx-auto px-8">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -358,7 +553,8 @@
                                 style="font-size: 32px;">verified_user</span>
                         </div>
                         <h3 class="text-2xl font-bold tracking-tight">Tin cậy & An toàn</h3>
-                        <p class="text-on-surface-variant leading-relaxed">Mọi điểm đến và chỗ ở đều được các chuyên gia
+                        <p class="text-on-surface-variant leading-relaxed">Mọi điểm đến và chỗ ở đều được các chuyên
+                            gia
                             du lịch của chúng tôi kiểm tra kỹ lưỡng để đảm bảo tiêu chuẩn an toàn cao nhất.</p>
                     </div>
                     <div class="flex flex-col items-start gap-6">
@@ -367,8 +563,10 @@
                         </div>
                         <h3 class="text-2xl font-bold tracking-tight">Ưu đãi độc quyền</h3>
                         <h3 class="hidden">Hidden</h3> <!-- To prevent breaking layout if titles change -->
-                        <p class="text-on-surface-variant leading-relaxed">Các thành viên Vivu sẽ nhận được quyền lợi
-                            độc quyền như nâng cấp phòng, dịch vụ đưa đón riêng tư tại sân bay và nhiều ưu đãi khác.</p>
+                        <p class="text-on-surface-variant leading-relaxed">Các thành viên Vivu sẽ nhận được quyền
+                            lợi
+                            độc quyền như nâng cấp phòng, dịch vụ đưa đón riêng tư tại sân bay và nhiều ưu đãi khác.
+                        </p>
                     </div>
                     <div class="flex flex-col items-start gap-6">
                         <div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center">
@@ -376,14 +574,15 @@
                                 style="font-size: 32px;">support_agent</span>
                         </div>
                         <h3 class="text-2xl font-bold tracking-tight">Hỗ trợ 24/7</h3>
-                        <p class="text-on-surface-variant leading-relaxed">Đội ngũ hỗ trợ chuyên nghiệp của chúng tôi
+                        <p class="text-on-surface-variant leading-relaxed">Đội ngũ hỗ trợ chuyên nghiệp của chúng
+                            tôi
                             luôn sẵn sàng phục vụ bạn mọi lúc, mọi nơi.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-
+        <hr class="blue-divider">
         <!-- Latest News (Editorial Grid) -->
         <section class="max-w-7xl mx-auto px-8 py-24 border-t border-outline-variant/10">
             <h2 class="text-4xl font-extrabold tracking-tight mb-12">Cẩm Nang Du lịch</h2>
@@ -410,10 +609,12 @@
                             src="https://vivu72.wordpress.com/wp-content/uploads/2026/04/du-lich-dao-ly-son-ivivu-4-370x215-1.jpg?allow_lossy=1" />
                     </div>
                     <span class="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-3 block">Culture</span>
-                    <h3 class="text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">The
+                    <h3 class="text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
+                        The
                         Du lịch đảo Lý Sơn chơi gì? 7 trải nghiệm khám phá khó bỏ lỡ</h3>
                     <p class="text-on-surface-variant line-clamp-2">
-                        Du lịch đảo Lý Sơn chơi gì? Gợi ý 7 hoạt động thú vị và những lưu ý quan trọng giúp bạn khám phá
+                        Du lịch đảo Lý Sơn chơi gì? Gợi ý 7 hoạt động thú vị và những lưu ý quan trọng giúp bạn khám
+                        phá
                         trọn vẹn hòn đảo xinh đẹp này.
 
                         .</p>
@@ -426,13 +627,17 @@
                             src="https://vivu72.wordpress.com/wp-content/uploads/2026/04/du-lich-dao-phu-quy-ivivu-10-1536x1008-1.jpg?w=1440&allow_lossy=1" />
                     </div>
                     <span class="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-3 block">Luxury</span>
-                    <h3 class="text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">Wild
+                    <h3 class="text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
+                        Wild
                         Kinh nghiệm du lịch đảo Phú Quý hè 2026</h3>
-                    <p class="text-on-surface-variant line-clamp-2">Nếu bạn đang tìm điểm đến biển đảo vừa đẹp, lại chưa
+                    <p class="text-on-surface-variant line-clamp-2">Nếu bạn đang tìm điểm đến biển đảo vừa đẹp, lại
+                        chưa
                         quá đông đúc, thì một chuyến du lịch đảo Phú Quý là lựa chọn lý tưởng cho mùa hè 2026..</p>
                 </div>
             </div>
         </section>
+
+
         <!-- App Download (Asymmetric) -->
         <!-- <section class="max-w-7xl mx-auto px-8 py-24 flex flex-col md:flex-row items-center gap-16">
             <div class="flex-1 order-2 md:order-1">
@@ -468,5 +673,6 @@
 
 </html>
 <script>
+    // Slide show logic for accommodation types
 
 </script>
