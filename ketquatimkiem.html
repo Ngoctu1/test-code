@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "secondary": "#49607e",
+                        "tertiary-fixed": "#ffdea7",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary-fixed-dim": "#b1c8eb",
+                        "outline": "#717782",
+                        "surface-container-highest": "#e1e3e4",
+                        "inverse-primary": "#a2c9ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#4a607f",
+                        "secondary-fixed": "#d3e4ff",
+                        "tertiary-container": "#d69d1c",
+                        "background": "#f8f9fa",
+                        "surface-container": "#edeeef",
+                        "surface-bright": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed-variant": "#5e4200",
+                        "on-error": "#ffffff",
+                        "tertiary": "#7c5800",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "on-tertiary-container": "#503800",
+                        "on-secondary": "#ffffff",
+                        "primary": "#0060a8",
+                        "on-tertiary-fixed": "#271900",
+                        "on-secondary-fixed": "#011c37",
+                        "on-primary-fixed": "#001c38",
+                        "surface": "#f8f9fa",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#314865",
+                        "tertiary-fixed-dim": "#fabc3d",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#c4dcff",
+                        "primary-container": "#67aaf9",
+                        "surface-container-low": "#f3f4f5",
+                        "on-background": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191c1d",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#0060a8",
+                        "outline-variant": "#c1c7d3",
+                        "on-primary-fixed-variant": "#004881",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#003d6f",
+                        "on-surface-variant": "#414751",
+                        "primary-fixed": "#d3e4ff",
+                        "surface-dim": "#d9dadb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "display": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/searchbar.js"></script>
+    <link rel="icon" type="image/png" href="icon/vivu(1).png">
+
+</head>
+
+<body class="bg-background font-body text-on-surface">
+    <!-- TopAppBar -->
+    <div id="header-component"></div>
+    <main class="pt-24 pb-12 px-6 max-w-7xl mx-auto">
+        <!-- Hero Search Section -->
+        <div class="mb-12">
+            <h1 class="font-display font-bold text-4xl md:text-5xl tracking-tighter text-on-surface mb-8">
+                Tìm nơi ở tại Đà Nẵng
+            </h1>
+            <div
+                class="glass-effect p-4 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.05)] max-w-6xl mx-auto flex flex-col md:flex-col items-start gap-2 ">
+                <div class="bordersearch" style="width: 100%;"><!-- div moi -->
+                    <div class=" flex items-center gap-4 px-6 py-3 text-left">
+                        <span class="material-symbols-outlined text-primary">location_on</span>
+                        <div class="flex flex-col" style="width: 100%;">
+                            <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Địa
+                                điểm</span>
+                            <input
+                                class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline"
+                                placeholder="Nơi muốn đén?" type="text" />
+                        </div>
+                    </div>
+                </div>
+                <hr style="width: 100%; border: none; border-top: 2px solid #aad4ea; margin: 0;">
+                <div class="flex flex-row md:flex-row">
+
+                    <div class="flex-1 flex items-center gap-4 px-6 py-3 text-left bordersearch">
+                        <span class="material-symbols-outlined text-primary">calendar_month</span>
+
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Nhận
+                                    phòng</span>
+                                <input id="check-in"
+                                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline block"
+                                    placeholder="Chọn ngày đến" type="text" readonly />
+                            </div>
+
+                            <span class="material-symbols-outlined text-primary">calendar_month</span>
+
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Trả
+                                    phòng</span>
+                                <input id="check-out"
+                                    class="bg-transparent border-none p-0 focus:ring-0 text-on-surface font-semibold placeholder:text-outline block"
+                                    placeholder="Chọn ngày đi" type="text" readonly />
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="hidden md:block w-[1px] h-10 bg-outline-variant opacity-20"></div>
+
+                    <div class="relative flex-1" id="booking-guest-container">
+
+                        <div id="booking-guest-trigger"
+                            class="flex items-center gap-4 px-6 py-3 text-left bordersearch cursor-pointer hover:bg-gray-50 rounded-lg transition">
+                            <span class="material-symbols-outlined text-primary text-gray-500">group</span>
+                            <div class="flex flex-col pointer-events-none">
+                                <span class="text-sm tracking-widest text-on-surface-variant font-bold text-gray-500"
+                                    id="text-room-count">
+                                    1 Phòng
+                                </span>
+                                <span class="bg-transparent border-none p-0 text-on-surface font-semibold text-gray-900"
+                                    id="text-guest-count">
+                                    1 người lớn, 0 trẻ em
+                                </span>
+                            </div>
+                        </div>
+
+                        <div id="booking-guest-popup"
+                            class="hidden absolute top-full left-0 mt-3 w-80 bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-gray-200 z-50">
+
+                            <div
+                                class="absolute -top-2 left-10 w-4 h-4 bg-white border-t border-l border-gray-200 transform rotate-45">
+                            </div>
+
+                            <div class="relative bg-white rounded-xl p-2 z-10">
+                                <div class="flex justify-between items-center p-3 border-b border-gray-100">
+                                    <span class="text-gray-800 font-medium">Phòng</span>
+                                    <div class="flex items-center gap-4">
+                                        <button type="button"
+                                            class="btn-decrease w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                            data-target="room">-</button>
+                                        <span class="w-4 text-center font-semibold" id="val-room">1</span>
+                                        <button type="button"
+                                            class="btn-increase w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                            data-target="room">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between items-center p-3 border-b border-gray-100">
+                                    <div class="flex flex-col">
+                                        <span class="text-gray-800 font-medium">Người Lớn</span>
+                                        <span class="text-sm text-gray-500">Từ 17 tuổi</span>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <button type="button"
+                                            class="btn-decrease w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                            data-target="adult">-</button>
+                                        <span class="w-4 text-center font-semibold" id="val-adult">1</span>
+                                        <button type="button"
+                                            class="btn-increase w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                            data-target="adult">+</button>
+                                    </div>
+                                </div>
+
+                                <div class="flex justify-between items-center p-3">
+                                    <div class="flex flex-col">
+                                        <span class="text-gray-800 font-medium">Trẻ em</span>
+                                        <span class="text-sm text-gray-500">Từ 0 - 16 tuổi</span>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <button type="button"
+                                            class="btn-decrease w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                            data-target="child">-</button>
+                                        <span class="w-4 text-center font-semibold" id="val-child">0</span>
+                                        <button type="button"
+                                            class="btn-increase w-8 h-8 rounded-full border border-gray-300 flex justify-center items-center text-gray-600 hover:border-blue-500 hover:text-blue-500"
+                                            data-target="child">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button
+                        class="w-full md:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold tracking-tight hover:shadow-lg transition-all"
+                        style="text-wrap-mode: nowrap;">
+                        Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Left Sidebar Filters -->
+            <aside class="w-full md:w-72 shrink-0 space-y-8">
+                <section>
+                    <h3 class="font-headline font-bold text-lg mb-4">Khoảng giá</h3>
+                    <div class="space-y-4">
+                        <div class="h-1 bg-surface-container-highest rounded-full relative">
+                            <div class="absolute left-1/4 right-1/4 h-1 bg-primary rounded-full"></div>
+                            <div
+                                class="absolute left-1/4 top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-primary rounded-full shadow-md">
+                            </div>
+                            <div
+                                class="absolute right-1/4 top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-primary rounded-full shadow-md">
+                            </div>
+                        </div>
+                        <div class="flex justify-between text-sm font-medium text-on-surface-variant">
+                            <span>500.000₫</span>
+                            <span>5.000.000₫+</span>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="font-headline font-bold text-lg mb-4">Hạng sao</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <button
+                            class="px-4 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant/20 text-sm font-semibold hover:border-primary transition-colors">3
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">star</span></button>
+                        <button class="px-4 py-2 rounded-xl bg-primary text-on-primary text-sm font-semibold">4 <span
+                                class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">star</span></button>
+                        <button
+                            class="px-4 py-2 rounded-xl bg-surface-container-lowest border border-outline-variant/20 text-sm font-semibold hover:border-primary transition-colors">5
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">star</span></button>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="font-headline font-bold text-lg mb-4">Tiện nghi</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input checked=""
+                                class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
+                                type="checkbox" />
+                            <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Hồ bơi
+                                ngoài trời</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
+                                type="checkbox" />
+                            <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Bữa
+                                sáng miễn phí</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input checked=""
+                                class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
+                                type="checkbox" />
+                            <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Đưa
+                                đón sân bay</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="rounded border-outline-variant text-primary focus:ring-primary h-5 w-5"
+                                type="checkbox" />
+                            <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Phòng
+                                Gym</span>
+                        </label>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="font-headline font-bold text-lg mb-4">Loại hình lưu trú</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input checked="" class="text-primary focus:ring-primary h-5 w-5" name="property_type"
+                                type="radio" />
+                            <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Khách
+                                sạn</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="text-primary focus:ring-primary h-5 w-5" name="property_type" type="radio" />
+                            <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Resort
+                                &amp; Spa</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="text-primary focus:ring-primary h-5 w-5" name="property_type" type="radio" />
+                            <span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">Căn hộ
+                                dịch vụ</span>
+                        </label>
+                    </div>
+                </section>
+            </aside>
+            <!-- Main Content Area -->
+            <div class="flex-1 space-y-6">
+                <div class="flex justify-between items-center mb-2">
+                    <p class="text-on-surface-variant"><span class="font-bold text-on-surface">124</span> khách sạn tại
+                        Đà Nẵng</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm font-medium text-on-surface-variant">Sắp xếp theo:</span>
+                        <select
+                            class="bg-transparent border-none text-sm font-bold text-primary focus:ring-0 cursor-pointer">
+                            <option>Phổ biến nhất</option>
+                            <option>Giá thấp nhất</option>
+                            <option>Đánh giá cao nhất</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Hotel Card 1 -->
+                <article
+                    class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row">
+                    <div class="lg:w-80 h-64 lg:h-auto relative shrink-0">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Luxury beachfront hotel resort in Da Nang with palm trees and a large swimming pool at sunset"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUWy8_Mt1Ze_XUuKaFj8yVAKY5t4GxysUp-LA69toaOsXgPwg1JZ4opkL8asEy2q-51xYD88u691gBq6B4gtihvt7ED-uU2pgCswWD4CkK_7nt0O0qNBTB09s3siJvZthR-qz2sh43pXPucTTsciUdEdFORQXiAiE5m8lvKvc2NG1-usV0JkaWnXuvToIV7_nZ5PMdVRbuC8q9W6wIBYrxumEEUpt1QNGQ1XKEOeNxdnukkX2ZL9AGJd0fY77vIHj2nJUsShtTUw" />
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span>4.9 (240 đánh giá)</span>
+                        </div>
+                        <button
+                            class="absolute top-4 right-4 bg-white/50 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-red-500 transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h2 class="font-headline font-bold text-xl lg:text-2xl text-on-surface">InterContinental
+                                    Danang Sun Peninsula Resort</h2>
+                                <span
+                                    class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-lg text-xs font-bold">Resort</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-on-surface-variant text-sm mb-4">
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                                <span>Bán đảo Sơn Trà, Đà Nẵng</span>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-6">
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">pool</span>
+                                    <span>Hồ bơi</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">restaurant</span>
+                                    <span>Bữa sáng</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">wifi</span>
+                                    <span>Wifi miễn phí</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="text-xs text-on-surface-variant line-through">5.200.000₫</span>
+                                <div class="text-2xl font-black text-primary">4.850.000₫ <span
+                                        class="text-xs font-normal text-on-surface-variant">/ đêm</span></div>
+                            </div>
+                            <button
+                                class="bg-primary text-on-primary px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors active:scale-95">
+                                Xem phòng
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Hotel Card 2 -->
+                <article
+                    class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row">
+                    <div class="lg:w-80 h-64 lg:h-auto relative shrink-0">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Modern high-rise city hotel in Da Nang overlooking the Han River at night with bright city lights"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlPMD8O9XwMNODGx_-LfExQPWWazE6Jh2aHXwkK3tnn7sKuD2Eco4kT2x2wmpST6UpwnR9wyrbkwgVschl9iTTSFgApSai7FUbQjmTBxkgcTcyz3Vgw0_TFm-T1JVfTk-WLS-pCYSfzRGQk7O_HLUe0Tp-1ckCydoiOS-bsMbafdWMAiRpIbdo11erwWSJ5ZOL-DVVeKyTOwcQ9Df7Byhz9pbukwhvD88ayy1gWGsUlF6E9-URYy_SVCcUc1J5DH1bncM0FJuZMA" />
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span>4.7 (128 đánh giá)</span>
+                        </div>
+                        <button
+                            class="absolute top-4 right-4 bg-white/50 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-red-500 transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h2 class="font-headline font-bold text-xl lg:text-2xl text-on-surface">Hilton Da Nang
+                                </h2>
+                                <span
+                                    class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-lg text-xs font-bold">Khách
+                                    sạn</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-on-surface-variant text-sm mb-4">
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                                <span>Bạch Đằng, Quận Hải Châu, Đà Nẵng</span>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-6">
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">fitness_center</span>
+                                    <span>Gym</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">meeting_room</span>
+                                    <span>Phòng họp</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">local_bar</span>
+                                    <span>Quầy bar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <div class="text-2xl font-black text-primary">2.100.000₫ <span
+                                        class="text-xs font-normal text-on-surface-variant">/ đêm</span></div>
+                            </div>
+                            <button
+                                class="bg-primary text-on-primary px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors active:scale-95">
+                                Xem phòng
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Hotel Card 3 -->
+                <article
+                    class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col lg:flex-row">
+                    <div class="lg:w-80 h-64 lg:h-auto relative shrink-0">
+                        <img class="w-full h-full object-cover"
+                            data-alt="Chic boutique hotel interior with minimal wood furniture and large windows showing a view of the My Khe beach"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrablRnDqX9-qspoiwwdXZEymAnkO4W_qXCJmM2Vkk3JyV2XIcYP_oFt3scQtQ9PMdrFHVxeVLEj4FGIAiACgsSvelAWkioA_WQqxUTxm1KH45_PCxR8M4ctvONBn-kJ5E3KVt5sFS23_Jl4NZAUBQTxQl5FC2RVT5Bd4fttbHQTxxCJJj2JYQav_1oTo4o_8shW-Ympa54VwrOtgSpALSya1HrzaDSlTu3iWjCS2OAvRdfQJJ9CuW5XijPuAKwpfIZvO_1qc0vw" />
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span>4.5 (86 đánh giá)</span>
+                        </div>
+                        <button
+                            class="absolute top-4 right-4 bg-white/50 backdrop-blur-md p-2 rounded-full text-white hover:bg-white hover:text-red-500 transition-colors">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h2 class="font-headline font-bold text-xl lg:text-2xl text-on-surface">Fusion Suites Da
+                                    Nang</h2>
+                                <span
+                                    class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-lg text-xs font-bold">Căn
+                                    hộ</span>
+                            </div>
+                            <div class="flex items-center gap-1 text-on-surface-variant text-sm mb-4">
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                                <span>Võ Nguyên Giáp, Quận Sơn Trà, Đà Nẵng</span>
+                            </div>
+                            <div class="flex flex-wrap gap-4 mb-6">
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">spa</span>
+                                    <span>Spa &amp; Massage</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-xs font-medium text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-lg">kitchen</span>
+                                    <span>Bếp riêng</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="text-xs text-on-surface-variant line-through">1.800.000₫</span>
+                                <div class="text-2xl font-black text-primary">1.550.000₫ <span
+                                        class="text-xs font-normal text-on-surface-variant">/ đêm</span></div>
+                            </div>
+                            <button
+                                class="bg-primary text-on-primary px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-colors active:scale-95">
+                                Xem phòng
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <!-- Pagination -->
+                <div class="flex justify-center items-center gap-2 pt-8">
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-on-primary font-bold">1</button>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant font-bold hover:bg-primary hover:text-on-primary transition-colors">2</button>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant font-bold hover:bg-primary hover:text-on-primary transition-colors">3</button>
+                    <span class="px-2">...</span>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant font-bold hover:bg-primary hover:text-on-primary transition-colors">12</button>
+                    <button
+                        class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container-high text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <div id="footer-component"></div>
+
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+        <div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-medium font-['Inter']">Trang chủ</span>
+        </div>
+        <div
+            class="flex flex-col items-center justify-center text-blue-700 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 rounded-2xl px-4 py-1">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+            <span class="text-[10px] font-medium font-['Inter']">Tìm kiếm</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500">
+            <span class="material-symbols-outlined">confirmation_number</span>
+            <span class="text-[10px] font-medium font-['Inter']">Đặt chỗ</span>
+        </div>
+        <div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-500">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] font-medium font-['Inter']">Tài khoản</span>
+        </div>
+    </nav>
+</body>
+
+</html>
